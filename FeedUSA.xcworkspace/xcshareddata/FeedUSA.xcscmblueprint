@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "61F3B61DD84A7ACE92457D124859FB9039E77A97",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "49E5A915246AC8705F8642CBE6626F2E748B2587" : 0,
+    "61F3B61DD84A7ACE92457D124859FB9039E77A97" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07E40562-85CC-4A26-809E-38B1CFF960C9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "49E5A915246AC8705F8642CBE6626F2E748B2587" : "FEED_USA\/feed_USA\/",
+    "61F3B61DD84A7ACE92457D124859FB9039E77A97" : "feedUSA\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "FeedUSA",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "FeedUSA.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:cenkerdemir\/feedNYC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "49E5A915246AC8705F8642CBE6626F2E748B2587"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cenkerdemir\/feedUSA.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "61F3B61DD84A7ACE92457D124859FB9039E77A97"
+    }
+  ]
+}
