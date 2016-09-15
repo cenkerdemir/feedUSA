@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B57F4EE4746045CEAE2D933A3C8EC9E"
-               BuildableName = "ChameleonFramework.framework"
-               BlueprintName = "ChameleonFramework"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "1BAC3F5D1D58D3520031C3AC"
+               BuildableName = "FeedUSA.app"
+               BlueprintName = "FeedUSA"
+               ReferencedContainer = "container:FeedUSA.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BAC3F5D1D58D3520031C3AC"
+            BuildableName = "FeedUSA.app"
+            BlueprintName = "FeedUSA"
+            ReferencedContainer = "container:FeedUSA.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B57F4EE4746045CEAE2D933A3C8EC9E"
-            BuildableName = "ChameleonFramework.framework"
-            BlueprintName = "ChameleonFramework"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "1BAC3F5D1D58D3520031C3AC"
+            BuildableName = "FeedUSA.app"
+            BlueprintName = "FeedUSA"
+            ReferencedContainer = "container:FeedUSA.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1BAC3F5D1D58D3520031C3AC"
+            BuildableName = "FeedUSA.app"
+            BlueprintName = "FeedUSA"
+            ReferencedContainer = "container:FeedUSA.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

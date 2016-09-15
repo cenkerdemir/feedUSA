@@ -25,7 +25,6 @@
 		780345E31D788E9E009871A2 /* FacilityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345C81D788E9E009871A2 /* FacilityTableViewController.swift */; };
 		780345E41D788E9E009871A2 /* FacilityXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345C91D788E9E009871A2 /* FacilityXMLParser.swift */; };
 		780345E51D788E9E009871A2 /* GeocodingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345CB1D788E9E009871A2 /* GeocodingAPI.swift */; };
-		780345E61D788E9E009871A2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 780345CC1D788E9E009871A2 /* Info.plist */; };
 		780345E71D788E9E009871A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780345CD1D788E9E009871A2 /* Main.storyboard */; };
 		780345E81D788E9E009871A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345CE1D788E9E009871A2 /* MapViewController.swift */; };
 		780345E91D788E9E009871A2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345CF1D788E9E009871A2 /* MenuViewController.swift */; };
@@ -203,12 +202,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Flatiron School";
 				TargetAttributes = {
 					1BAC3F5D1D58D3520031C3AC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = KXY9EDFTF5;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -241,7 +242,6 @@
 				780345D71D788E9E009871A2 /* Base.lproj in Resources */,
 				780345F01D788F7F009871A2 /* GoogleService-Info.plist in Resources */,
 				780345DD1D788E9E009871A2 /* DennisStoryboard.storyboard in Resources */,
-				780345E61D788E9E009871A2 /* Info.plist in Resources */,
 				780345E21D788E9E009871A2 /* FacilityDetails.xml in Resources */,
 				780345E71D788E9E009871A2 /* Main.storyboard in Resources */,
 				7898172C1D7894CC00117C65 /* LaunchScreen.storyboard in Resources */,
@@ -352,8 +352,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -398,8 +400,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -418,6 +422,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -427,17 +432,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E8F7B8BD938A6A5F288736D /* Pods-FeedUSA.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Flatiron School, Inc (KXY9EDFTF5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUSA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.team-octopus";
 				PRODUCT_NAME = FeedUSA;
-				PROVISIONING_PROFILE = "dab10e9f-0e0d-4813-a0e1-f7c6fcca5ee9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedUSA/FeedUSA-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -446,16 +455,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 714EE0B76CFA9C5DB7C1F192 /* Pods-FeedUSA.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Flatiron School, Inc (KXY9EDFTF5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FeedUSA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flatironschool.team-octopus";
 				PRODUCT_NAME = FeedUSA;
-				PROVISIONING_PROFILE = "dab10e9f-0e0d-4813-a0e1-f7c6fcca5ee9";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedUSA/FeedUSA-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
