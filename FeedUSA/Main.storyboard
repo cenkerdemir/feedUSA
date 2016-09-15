@@ -41,8 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="khH-vu-M25">
-                                <frame key="frameInset" width="600" height="106"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khH-vu-M25">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIRECTORY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgO-0D-hBg">
                                         <constraints>
@@ -60,17 +59,13 @@
                                     <constraint firstItem="jgO-0D-hBg" firstAttribute="top" secondItem="khH-vu-M25" secondAttribute="top" constant="63" id="8Yx-jW-Drm"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gMG-7s-gdU">
-                                <frame key="frameInset" minX="16" minY="131" width="204" height="310"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gMG-7s-gdU">
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-B6-HWL">
-                                        <frame key="frameInset" width="204" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-B6-HWL">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="que-Vy-TwR" userLabel="All Locations Label">
-                                                <frame key="frameInset" minX="34" minY="13" width="132" height="39"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="que-Vy-TwR" userLabel="All Locations Label">
+                                                <frame key="frameInset" minX="36" minY="13" width="132" height="39"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="All Locations">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,12 +76,9 @@
                                             </button>
                                         </subviews>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VtJ-dM-ogY">
-                                        <frame key="frameInset" minY="65" width="204" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtJ-dM-ogY">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLm-Rk-Jxc">
-                                                <frame key="frameInset" minX="29" minY="10" width="143" height="39"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLm-Rk-Jxc">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="Food Pantries"/>
                                                 <connections>
@@ -94,13 +86,15 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="aLm-Rk-Jxc" firstAttribute="leading" secondItem="VtJ-dM-ogY" secondAttribute="leading" constant="29" id="TiN-Tq-S1u"/>
+                                            <constraint firstItem="aLm-Rk-Jxc" firstAttribute="centerY" secondItem="VtJ-dM-ogY" secondAttribute="centerY" id="bmO-F1-ZU1"/>
+                                            <constraint firstItem="aLm-Rk-Jxc" firstAttribute="top" secondItem="VtJ-dM-ogY" secondAttribute="top" constant="10" id="uK7-Vz-d4r"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uBe-Fu-pQO">
-                                        <frame key="frameInset" minY="130" width="204" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBe-Fu-pQO">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-1K-v9D">
-                                                <frame key="frameInset" minX="26" minY="10" width="149" height="39"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddK-1K-v9D">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="Soup Kitchens"/>
                                                 <connections>
@@ -108,13 +102,15 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ddK-1K-v9D" firstAttribute="centerY" secondItem="uBe-Fu-pQO" secondAttribute="centerY" id="L3Y-PO-1ud"/>
+                                            <constraint firstItem="ddK-1K-v9D" firstAttribute="top" secondItem="uBe-Fu-pQO" secondAttribute="top" constant="10" id="L3f-QR-UcL"/>
+                                            <constraint firstItem="ddK-1K-v9D" firstAttribute="leading" secondItem="uBe-Fu-pQO" secondAttribute="leading" constant="26" id="mb1-V5-rci"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-r4-Q8i">
-                                        <frame key="frameInset" minY="195" width="204" height="50"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcL-r4-Q8i">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAl-RS-z0H">
-                                                <frame key="frameInset" minX="77" minY="5" width="46" height="39"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAl-RS-z0H">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="Map"/>
                                                 <connections>
@@ -122,13 +118,15 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="HAl-RS-z0H" firstAttribute="top" secondItem="VcL-r4-Q8i" secondAttribute="top" constant="5" id="2Sg-WV-Sov"/>
+                                            <constraint firstItem="HAl-RS-z0H" firstAttribute="leading" secondItem="VcL-r4-Q8i" secondAttribute="leading" constant="77" id="Hdo-BK-5Qo"/>
+                                            <constraint firstItem="HAl-RS-z0H" firstAttribute="centerY" secondItem="VcL-r4-Q8i" secondAttribute="centerY" id="mCv-kF-sJz"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-NS-Tdg">
-                                        <frame key="frameInset" minY="250" width="204" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-NS-Tdg">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hey-pe-iAi">
-                                                <frame key="frameInset" minX="53" minY="10" width="95" height="39"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hey-pe-iAi">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="22"/>
                                                 <state key="normal" title="About Us"/>
                                                 <connections>
@@ -137,11 +135,17 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hey-pe-iAi" firstAttribute="centerY" secondItem="CzA-NS-Tdg" secondAttribute="centerY" id="i0S-um-Imx"/>
+                                            <constraint firstItem="hey-pe-iAi" firstAttribute="leading" secondItem="CzA-NS-Tdg" secondAttribute="leading" constant="53" id="oex-rQ-AsD"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ALI-B6-HWL" secondAttribute="bottom" constant="250" id="2w1-hf-gTE"/>
                                     <constraint firstItem="ALI-B6-HWL" firstAttribute="trailing" secondItem="VtJ-dM-ogY" secondAttribute="trailing" id="N1N-Sw-I4N"/>
                                     <constraint firstItem="VcL-r4-Q8i" firstAttribute="trailing" secondItem="CzA-NS-Tdg" secondAttribute="trailing" id="NXy-YO-pv7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ALI-B6-HWL" secondAttribute="trailing" id="W90-1d-LKE"/>
                                     <constraint firstItem="uBe-Fu-pQO" firstAttribute="trailing" secondItem="VcL-r4-Q8i" secondAttribute="trailing" id="hJ3-mB-MPg"/>
                                     <constraint firstItem="VtJ-dM-ogY" firstAttribute="trailing" secondItem="uBe-Fu-pQO" secondAttribute="trailing" id="rg5-I5-IID"/>
                                 </constraints>
@@ -149,8 +153,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="khH-vu-M25" secondAttribute="trailing" constant="-225" id="UKc-j0-1In"/>
+                            <constraint firstItem="gMG-7s-gdU" firstAttribute="top" secondItem="ttq-bn-JOl" secondAttribute="top" constant="131" id="1bR-qS-rPV"/>
+                            <constraint firstItem="gMG-7s-gdU" firstAttribute="top" secondItem="khH-vu-M25" secondAttribute="bottom" constant="25" id="3dJ-3R-mpj"/>
+                            <constraint firstAttribute="trailing" secondItem="gMG-7s-gdU" secondAttribute="trailing" constant="155" id="Bfh-FQ-dOq"/>
+                            <constraint firstAttribute="trailing" secondItem="khH-vu-M25" secondAttribute="trailing" id="UKc-j0-1In"/>
+                            <constraint firstItem="VIZ-N4-3bf" firstAttribute="top" secondItem="gMG-7s-gdU" secondAttribute="bottom" constant="226" id="W9f-x9-qpx"/>
                             <constraint firstItem="khH-vu-M25" firstAttribute="top" secondItem="ttq-bn-JOl" secondAttribute="top" id="fjL-Ui-Rxn"/>
+                            <constraint firstItem="gMG-7s-gdU" firstAttribute="leading" secondItem="ttq-bn-JOl" secondAttribute="leadingMargin" id="hW7-1Z-C96"/>
                             <constraint firstItem="khH-vu-M25" firstAttribute="leading" secondItem="ttq-bn-JOl" secondAttribute="leading" id="vUV-ln-aZP"/>
                         </constraints>
                     </view>
@@ -168,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pV7-pY-jC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198" y="198"/>
+            <point key="canvasLocation" x="1389.5999999999999" y="605.84707646176912"/>
         </scene>
         <!--DennisStoryboard-->
         <scene sceneID="KJm-IF-T9y">
@@ -176,7 +185,7 @@
                 <viewControllerPlaceholder storyboardName="DennisStoryboard" id="rDb-nV-Ii3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH5-EU-giL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1925" y="181"/>
+            <point key="canvasLocation" x="2606" y="810"/>
         </scene>
         <!--AboutUsViewController-->
         <scene sceneID="yu8-rG-8ce">
@@ -184,7 +193,7 @@
                 <viewControllerPlaceholder storyboardName="DennisStoryboard" referencedIdentifier="AboutUsViewController" id="kOH-Vb-lNy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV9-v1-GRo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="290"/>
+            <point key="canvasLocation" x="2519" y="443"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="AzT-7R-Wuh">
@@ -209,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XKQ-lx-Rtp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2584" y="-434"/>
+            <point key="canvasLocation" x="2927" y="-478"/>
         </scene>
         <!--CenkersStoryboard-->
         <scene sceneID="dHH-88-bZI">
@@ -217,7 +226,7 @@
                 <viewControllerPlaceholder storyboardName="CenkersStoryboard" id="rIS-ym-nfx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2U-jF-kaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3037" y="-434"/>
+            <point key="canvasLocation" x="3626" y="-479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eXQ-NV-juz">
@@ -235,11 +244,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uWM-iF-Y0G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1914" y="-434"/>
+            <point key="canvasLocation" x="2185" y="-478"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Eah-uz-nHs"/>
         <segue reference="1Go-j8-rOF"/>
-        <segue reference="tJg-Ci-GpC"/>
     </inferredMetricsTieBreakers>
 </document>
