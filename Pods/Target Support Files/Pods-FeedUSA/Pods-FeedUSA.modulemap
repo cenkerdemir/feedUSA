@@ -1,6 +1,0 @@
-framework module Pods_FeedUSA {
-  umbrella header "Pods-FeedUSA-umbrella.h"
-
-  export *
-  module * { export * }
-}
