@@ -1,238 +1,245 @@
 NVActivityIndicatorView
-===================
+=======================
 
+[![Build Status](https://travis-ci.org/ninjaprox/NVActivityIndicatorView.svg?branch=master)](https://travis-ci.org/ninjaprox/NVActivityIndicatorView)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/NVActivityIndicatorView.svg)](https://img.shields.io/cocoapods/v/NVActivityIndicatorView.svg)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
-# Introduction
-NVActivityIndicatorView is a collection of nice loading animations.
+## Introduction
+`NVActivityIndicatorView` is a collection of awesome loading animations.
 
-This is original a fork from [DGActivityIndicatorView](https://github.com/gontovnik/DGActivityIndicatorView), inspired by [Loaders.css](https://github.com/ConnorAtherton/loaders.css), written in Swift with full implementation of animations.
+This is original a fork from [DGActivityIndicatorView](https://github.com/gontovnik/DGActivityIndicatorView), inspired by [Loaders.css](https://github.com/ConnorAtherton/loaders.css), written in Swift with full implementation of animations, plus more.
 
 You can also find Objective-C version of this [here](https://github.com/ninjaprox/DGActivityIndicatorView).
 
-# Demo
+## Demo
 ![alt tag](https://raw.githubusercontent.com/ninjaprox/NVActivityIndicatorView/master/Demo.gif)
 
 For first-hand experience, just open the project and run it.
 
-# Animation types
+## Animation types
 
-1. BallPulse
-2. BallGridPulse
-3. BallClipRotate
-4. SquareSpin
-5. BallClipRotatePulse
-6. BallClipRotateMultiple
-7. BallPulseRise
-8. BallRotate
-9. CubeTransition
-10. BallZigZag
-11. BallZigZagDeflect
-12. BallTrianglePath
-13. BallScale
-14. LineScale
-15. LineScaleParty
-16. BallScaleMultiple
-17. BallPulseSync
-18. BallBeat
-19. LineScalePulseOut
-20. LineScalePulseOutRapid
-21. BallScaleRipple
-22. BallScaleRippleMultiple
-23. BallSpinFadeLoader
-24. LineSpinFadeLoader
-25. TriangleSkewSpin
-26. Pacman
-27. BallGridBeat
-28. SemiCircleSpin
-29. BallRotateChase
-30. Orbit
-31. AudioEqualizer
+| Type | Type | Type | Type |
+|---|---|---|---|
+|1. ballPulse | 2. ballGridPulse | 3. ballClipRotate | 4. squareSpin|
+|5. ballClipRotatePulse | 6. ballClipRotateMultiple | 7. ballPulseRise | 8. ballRotate|
+|9. cubeTransition | 10. ballZigZag | 11. ballZigZagDeflect | 12. ballTrianglePath|
+|13. ballScale | 14. lineScale | 15. lineScaleParty | 16. ballScaleMultiple|
+|17. ballPulseSync | 18. ballBeat | 19. lineScalePulseOut | 20. lineScalePulseOutRapid|
+|21. ballScaleRipple | 22. ballScaleRippleMultiple | 23. ballSpinFadeLoader | 24. lineSpinFadeLoader|
+|25. triangleSkewSpin | 26. pacman | 27. ballGridBeat | 28. semiCircleSpin|
+|29. ballRotateChase | 30. orbit | 31. audioEqualizer | 32. circleStrokeSpin|
 
-# Installation
+## Installation
 
-## Cocoapods
+### Cocoapods
 
-Install Cocoapods if need be
+Install Cocoapods if need be.
 
 ```bash
 $ gem install cocoapods
 ```
 
-Add NVActivityIndicatorView in your `Podfile`
+Add `NVActivityIndicatorView` in your `Podfile`.
 
-```bash
+```ruby
 use_frameworks!
 
 pod 'NVActivityIndicatorView'
 ```
 
-Then, run the following command
+Then, run the following command.
 
 ```bash
 $ pod install
 ```
-## Carthage
+### Carthage
 
-Install Carthage if need be
+Install Carthage if need be.
 
 ```bash
 $ brew update
 $ brew install carthage
 ```
 
-Add NVActivityIndicatorView in your `Cartfile`
+Add `NVActivityIndicatorView` in your `Cartfile`.
 
-```bash
+```ruby
 github "ninjaprox/NVActivityIndicatorView"
 ```
 
 Run `carthage` to build the framework and drag the built `NVActivityIndicatorView.framework` into your Xcode project.
 
-## Manual
+_**Note:** You might encounter compile issue, if so please use `carthage` branch instead. Check issue [#101](https://github.com/ninjaprox/NVActivityIndicatorView/issues/101) for more information._
 
-Copy NVActivityIndicatorView folder to your project. That's it.
+### Manual
 
-# Usage
+Copy `NVActivityIndicatorView` folder to your project. That's it.
 
-Firstly, import NVActivityIndicatorView
+_**Note:** Make sure that all files in `NVActivityIndicatorView` included in Compile Sources in Build Phases._
+
+_**Note:** If you encounter issues while uploading the app to iTunes Connect, remove the `Info.plist` file in `NVActivityIndicatorView`. Check issue [#129](https://github.com/ninjaprox/NVActivityIndicatorView/issues/129) for more information._
+
+## Migration
+
+### Version 4.0.0
+
+This version requires Xcode 9.0 and Swift 4.
+
+### Version 3.7.0
+
+This version splits `NVActivityIndicatorView` pod to 2 subpods `NVActivityIndicatorView/Presenter` and `NVActivityIndicatorView/AppExtension`. There is no need to change `pod NVActivityIndicatorView` to `pod NVActivityIndicatorView/Presenter` since it will be installed by default if you use the main pod name.
+
+However, if you want to use `NVActivityIndicatorView` in app extension, use `pod NVActivityIndicatorView/AppExtension` instead.
+
+_**Note:** Related issue [#119](https://github.com/ninjaprox/NVActivityIndicatorView/issues/119)._
+
+### Version 3.6.0
+
+This version requires Xcode 8.3 and Swift 3.1.
+
+### Version 3.0
+
+This version requires Xcode 8.0 and Swift 3.
+
+- `NVActivityIndicatorView.startAnimation()` and `NVActivityIndicatorView.stopAnimation()` are deleted. Use `NVActivityIndicatorView.startAnimating()` and `NVActivityIndicatorView.stopAnimating()` instead.
+- `UIViewController.startActivityAnimating()` and `UIViewController.stopActivityAnimating()` are deleted. Use `UIViewController.startAnimating()` and `UIViewController.stopAnimating()` instead.
+
+### Version 2.0
+
+This version continues to spport Xcode 7.0 and Swift 2.2 and earlier.
+For Swift 2.3 support, use `swift2.3` branch instead.
+
+```ruby
+pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :branch => 'swift2.3'
+```
+
+## Usage
+
+Firstly, import `NVActivityIndicatorView`.
 
 ```swift
 import NVActivityIndicatorView
 ```
 
-## Initialization
+### Initialization
 
-Then, there are multiple ways you can create NVActivityIndicatorView:
+Then, there are two ways you can create NVActivityIndicatorView:
 
-- Use it in storyboard by changing class of any `UIView` to `NVActivityIndicatorView`
-This will use default values white, .BallSpinFadeLoader, 0 for color, type and padding respectively.
+- By storyboard, changing class of any `UIView` to `NVActivityIndicatorView`.
 
-- Create with specified type, color and padding
+_**Note:** Set Module to `NVActivityIndicatorView`._
+
+- By code, using initializer. All parameters other than `frame` are optional and `NVActivityIndicatorView.DEFAULT_*` are used as default values.
 
 ```swift
 NVActivityIndicatorView(frame: frame, type: type, color: color, padding: padding)
 ```
 
-Any of the last three arguments can be omitted. If an argument is omitted it will use the default values which are white, .BallSpinFadeLoader, 0 for color, type and padding respectively.
-Therefore, you can also create NVActivityIndicatorView using any of the following:
+### Control
 
-- Specify only frame, type and color
-```swift
-NVActivityIndicatorView(frame: frame, type: type, color: color)
-```
-
-- Specify only frame, type and padding
-```swift
-NVActivityIndicatorView(frame: frame, type: type, padding: padding)
-```
-
-- Specify only frame, color and padding
-```swift
-NVActivityIndicatorView(frame: frame, color: color, padding: padding)
-```
-
-- Specify only frame and type
-```swift
-NVActivityIndicatorView(frame: frame, type: type)
-```
-
-- Specify only frame and color
-```swift
-NVActivityIndicatorView(frame: frame, color: color)
-```
-
-- Specify only frame and padding
-```swift
-NVActivityIndicatorView(frame: frame, padding: padding)
-```
-
-- Specify only frame
-```swift
-NVActivityIndicatorView(frame: frame)
-```
-
-## Start/Stop animation
-
-Start animation
+Start animating.
 
 ```swift
-activityIndicatorView.startAnimation()
+activityIndicatorView.startAnimating()
 ```
 
-Stop animation
+Stop animating.
 
 ```swift
-activityIndicatorView.stopAnimation()
+activityIndicatorView.stopAnimating()
 ```
 
-## UI blocker
+Determine if it is animating.
 
-You can use `NVActivityIndicatorView` as UI blocker for `UIViewController` by conforming `NVActivityIndicatorViewable` protocol.
+```swift
+animating = activityIndicatorView.isAnimating
+```
+
+### Change properties
+
+In storyboard, you can change all properties in Attributes inspector tab of Utilities panel.
+
+_**Note:** Use one of values (case-insensitive) in [Animation types](#animation-types) for `Type Name`._
+
+All properties are public so you can change them after initializing.
+
+_**Note:** All changes must be made before calling `startAnimating()`._
+
+### UI blocker
+
+By conforming `NVActivityIndicatorViewable` protocol, you can use `NVActivityIndicatorView` as UI blocker for `UIViewController`.
 
 ```swift
 class ViewController: UIViewController, NVActivityIndicatorViewable { }
 ```
 
-Start animation
+Start animating.
 
 ```swift
-startActivityAnimating(size, message) // plus other parameters as when initializing
+startAnimating(size, message) // plus other parameters as in initializer.
 ```
 
-Stop animation
+Stop animating.
 
 ```swift
-stopActivityAnimating()
+stopAnimating()
 ```
 
-## Change properties
-
-If you use `NVActivityIndicatorView` in storyboard, you can change these properties in Attributes inspector tab of Utilities panel.
-
-Use one of values (case-insensitive) in [Animation types](#animation-types) for `Type Name`.
-
-Specify individual properties after initialization:
-
-- Specify type
-```swift
-activityIndicatorView.type = .LineScale
-```
-
-- Specify color
-```swift
-activityIndicatorView.color = UIColor.redColor()
-```
-
-Specify whether activity indicator view should hide once stopped
+Check if it is animating.
 
 ```swift
-activityIndicatorView.hidesWhenStopped = true
+animating = isAnimating
 ```
 
-Get current status of animation
-```swift
-animation = activityIndicatorView.animating
-```
+Or you can use `NVActivityIndicatorPresenter` to display UI blocker anywhere.
 
-## Change defaults
-
-Change global defaults if needed
+Start animating.
 
 ```swift
-NVActivityIndicatorView.DEFAULT_TYPE = .Pacman
-NVActivityIndicatorView.DEFAULT_COLOR = UIColor.yellowColor()
-NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(5.0)
-NVActivityIndicatorView.DEFAULT_BLOCKER_SIZE = CGSizeMake(60, 60)
+let activityData = ActivityData()
+
+NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData)
 ```
 
-# Acknowledgment
+_**Note:** Check [documentation](http://cocoadocs.org/docsets/NVActivityIndicatorView) for detail of `ActivityData`._
+
+Stop animating.
+
+```swift
+NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
+```
+
+Change message.
+
+```swift
+NVActivityIndicatorPresenter.sharedInstance.setMessage("Done")
+```
+
+Check if it is animating.
+
+```swift
+animating = NVActivityIndicatorPresenter.sharedInstance.isAnimating
+```
+
+#### Fade in/out animation
+
+You have control over showing and hiding UI blocker animation.
+
+```swift
+startAnimating(fadeInAnimation: fadeInAnimation)
+stopAnimating(fadeOutAnimation)
+```
+
+Check `DEFAULT_FADE_IN_ANIMATION` and `DEFAULT_FADE_OUT_ANIMATION` for examples of how to implement animation.
+
+## Acknowledgment
 
 Thanks [Connor Atherton](https://github.com/ConnorAtherton) for great loaders and [Danil Gontovnik](https://github.com/gontovnik) for kick-start.
 
-# License
+## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Nguyen Vinh [@ninjaprox](http://twitter.com/ninjaprox)
+Copyright (c) 2016 Vinh Nguyen [@ninjaprox](http://twitter.com/ninjaprox)

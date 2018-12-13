@@ -1,6 +1,17 @@
-#if !defined(__has_feature) || !__has_feature(objc_arc)
-#error "This file requires ARC support."
-#endif
+/*
+ * Copyright 2016 Google Inc. All rights reserved.
+ *
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this
+ * file except in compliance with the License. You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
+ * ANY KIND, either express or implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ */
 
 #import "GoogleMapsDemos/Samples/CustomIndoorViewController.h"
 
@@ -85,7 +96,7 @@
   [_levelPickerView selectRow:-1 inComponent:0 animated:NO];
 
   // UIPickerView insists on having some data; disable interaction if there's no levels.
-  _levelPickerView.userInteractionEnabled = ([_levels count] > 0);
+  _levelPickerView.userInteractionEnabled = (_levels.count > 0);
 }
 
 - (void)didChangeActiveLevel:(GMSIndoorLevel *)level {
@@ -133,7 +144,7 @@
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-  return [_levels count];
+  return _levels.count;
 }
 
 @end

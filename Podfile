@@ -7,8 +7,8 @@ target 'FeedUSA' do
 
   # Pods for FeedUSA
   pod 'GoogleMaps'
-  pod 'ChameleonFramework', '~> 2.1'
-  pod 'NVActivityIndicatorView', '~> 2.10'
+  pod 'ChameleonFramework'
+  pod 'NVActivityIndicatorView'
   pod 'Firebase/Core'
 
 end
