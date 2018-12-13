@@ -82,9 +82,9 @@ class CenkersDetailViewController: UIViewController {
     //updating labels
     func updateLabels() {
         self.facilityNameLabel.text = self.facilityToDisplay.name
-        self.addressLabel.setTitle(self.createFullAddress(), for: UIControlState())
+        self.addressLabel.setTitle(self.createFullAddress(), for: UIControl.State())
         let phoneNumWithExt = self.facilityToDisplay.phoneNumber.replacingOccurrences(of: " x", with: "  Ext:")
-        self.phoneNumberLabel.setTitle(phoneNumWithExt, for: UIControlState())
+        self.phoneNumberLabel.setTitle(phoneNumWithExt, for: UIControl.State())
         self.hoursLabel.text = self.facilityToDisplay.hoursOfOperation
         self.intakeLabel.text = self.facilityToDisplay.intake
         self.feeLabel.text = self.facilityToDisplay.fee
@@ -186,7 +186,7 @@ class CenkersDetailViewController: UIViewController {
         let destinationCoordinates = CLLocationCoordinate2DMake(destinationLatitude, destinationLongitude)
         
         let regionDistance:CLLocationDistance = 10000
-        let regionSpan = MKCoordinateRegionMakeWithDistance(destinationCoordinates, regionDistance, regionDistance)
+        let regionSpan = MKCoordinateRegion(center: destinationCoordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
         
         let myLocationPlacemark = MKPlacemark(coordinate: currentCoordinates, addressDictionary: nil)
         let myLocationMapItem = MKMapItem(placemark: myLocationPlacemark)
@@ -211,12 +211,12 @@ class CenkersDetailViewController: UIViewController {
         addressTitleLabel.textColor = UIColor.flatBlack()
         
         // Address button
-        addressLabel.setTitleColor(UIColor.flatWhite(), for: UIControlState())
+        addressLabel.setTitleColor(UIColor.flatWhite(), for: UIControl.State())
         addressLabel.backgroundColor = UIColor.flatNavyBlue().lighten(byPercentage: 0.1)
         addressLabel.layer.cornerRadius = 11.5
         phoneTitleLabel.textColor = UIColor.flatBlack()
         
-        phoneNumberLabel.setTitleColor(UIColor.flatWhite(), for: UIControlState())
+        phoneNumberLabel.setTitleColor(UIColor.flatWhite(), for: UIControl.State())
         phoneNumberLabel.backgroundColor = UIColor.flatNavyBlue().lighten(byPercentage: 0.1)
         phoneNumberLabel.layer.cornerRadius = 11.5
         
@@ -232,7 +232,7 @@ class CenkersDetailViewController: UIViewController {
         eligibilityLabel.textColor = UIColor.flatSkyBlueColorDark()
         reqyiredDocTittleLabel.textColor = UIColor.flatBlack()
         requiredDocLabel.textColor = UIColor.flatSkyBlueColorDark()
-        doneButton.setTitleColor(UIColor.flatSkyBlue(), for: UIControlState())
+        doneButton.setTitleColor(UIColor.flatSkyBlue(), for: UIControl.State())
 
 
     }

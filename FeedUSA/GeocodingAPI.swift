@@ -16,7 +16,7 @@ class GeocodingAPI {
     var addressesObjects: [NSDictionary] = []
     
     let geocodingURL = "https://maps.googleapis.com/maps/api/geocode/json?"
-    let geocodingAPI = "\(Secrets.googleGeocodingAPI)"
+    let geocodingAPI = ""
     
     
     // MARK: -Gets locations from GoogleMaps API
@@ -71,7 +71,7 @@ class GeocodingAPI {
         
         // 2. create task for this session
         // 2.1 for this URL
-        if let url = URL(string: "\(self.geocodingURL)address=\(address)&key=\(Secrets.googleGeocodingAPI)".replacingOccurrences(of: " ", with: "%20")) {
+        if let url = URL(string: "\(self.geocodingURL)address=\(address)&key=GETKEYHERE".replacingOccurrences(of: " ", with: "%20")) {
             
             // 2.2 make a task that will
             let task = session.dataTask(with: url, completionHandler: {

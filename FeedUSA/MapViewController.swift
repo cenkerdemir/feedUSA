@@ -48,7 +48,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         self.setupMarkers { completion in
             if completion {
                 OperationQueue.main.addOperation({
-                    self.activityIndicator.stopAnimation()
+                    self.activityIndicator.stopAnimating()
                 })
             }
         }
@@ -108,7 +108,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     // MARK: -Displays all the pins on map
     func setupMarkers(_ completion:(Bool) -> ()) {
-        self.activityIndicator.startAnimation()
+        self.activityIndicator.startAnimating()
         
         for i in 0..<self.store.facilities.count {
             let currentFacility = self.store.facilities[i]
@@ -206,8 +206,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     // Sets properties of "get nearby help" button
     func addBigRedButton() {
         button = UIButton()
-        button.setTitle("FIND NEAREST", for: UIControlState())
-        button.setTitleColor(UIColor.flatWhite(), for: UIControlState())
+        button.setTitle("FIND NEAREST", for: UIControl.State())
+        button.setTitleColor(UIColor.flatWhite(), for: UIControl.State())
         button.backgroundColor = UIColor.flatNavyBlue().lighten(byPercentage: 0.1)
         button.addTarget(self, action: #selector(MapViewController.helpButtonTapped(_:)), for: .touchUpInside)
         button.frame = CGRect(x: 170, y: 450, width: 220, height: 30)
@@ -220,7 +220,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         //153 490 295 40
     }
     
-    func helpButtonTapped(_ sender: UIButton!) {
+    @objc func helpButtonTapped(_ sender: UIButton!) {
         let cenkersStoryboard = UIStoryboard(name: "CenkersStoryboard", bundle: nil)
         
         let detailVC = cenkersStoryboard.instantiateViewController(withIdentifier: "CenkersDetailViewController") as! CenkersDetailViewController
@@ -360,7 +360,7 @@ extension MapViewController {
         let customInfoWindow : CustomInfoWindow!
         customInfoWindow = CustomInfoWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 180))
         //NSBundle.mainBundle().loadNibNamed("CustomInfoWindow", owner: self, options: nil)[0] as! CustomInfoWindow
-        customInfoWindow.nameButtonLabel.setTitle("\(marker.title!)\n\(marker.snippet!)", for: UIControlState())
+        customInfoWindow.nameButtonLabel.setTitle("\(marker.title!)\n\(marker.snippet!)", for: UIControl.State())
         
         let currentZoomLevel = mapView.camera.zoom
         mapView.camera = GMSCameraPosition(target: marker.position, zoom: currentZoomLevel, bearing: 0, viewingAngle: 0)

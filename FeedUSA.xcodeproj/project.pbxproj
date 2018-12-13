@@ -28,7 +28,6 @@
 		780345E71D788E9E009871A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 780345CD1D788E9E009871A2 /* Main.storyboard */; };
 		780345E81D788E9E009871A2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345CE1D788E9E009871A2 /* MapViewController.swift */; };
 		780345E91D788E9E009871A2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345CF1D788E9E009871A2 /* MenuViewController.swift */; };
-		780345EA1D788E9E009871A2 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345D01D788E9E009871A2 /* Secrets.swift */; };
 		780345EB1D788E9E009871A2 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780345D21D788E9E009871A2 /* SWRevealViewController.m */; };
 		780345EC1D788E9E009871A2 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780345D31D788E9E009871A2 /* WebViewController.swift */; };
 		780345F01D788F7F009871A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 780345EF1D788F7F009871A2 /* GoogleService-Info.plist */; };
@@ -64,7 +63,6 @@
 		780345CD1D788E9E009871A2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = FeedUSA/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		780345CE1D788E9E009871A2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = FeedUSA/MapViewController.swift; sourceTree = SOURCE_ROOT; };
 		780345CF1D788E9E009871A2 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = FeedUSA/MenuViewController.swift; sourceTree = SOURCE_ROOT; };
-		780345D01D788E9E009871A2 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Secrets.swift; path = FeedUSA/Secrets.swift; sourceTree = SOURCE_ROOT; };
 		780345D11D788E9E009871A2 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = FeedUSA/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		780345D21D788E9E009871A2 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = FeedUSA/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		780345D31D788E9E009871A2 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = FeedUSA/WebViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -130,7 +128,6 @@
 				780345EF1D788F7F009871A2 /* GoogleService-Info.plist */,
 				780345CE1D788E9E009871A2 /* MapViewController.swift */,
 				780345CF1D788E9E009871A2 /* MenuViewController.swift */,
-				780345D01D788E9E009871A2 /* Secrets.swift */,
 				780345D31D788E9E009871A2 /* WebViewController.swift */,
 				780345BB1D788E9E009871A2 /* Assets.xcassets */,
 				780345BC1D788E9E009871A2 /* Base.lproj */,
@@ -323,7 +320,6 @@
 				780345D51D788E9E009871A2 /* AppDelegate.swift in Sources */,
 				780345E01D788E9E009871A2 /* Facility.swift in Sources */,
 				780345DE1D788E9E009871A2 /* DennisViewController.swift in Sources */,
-				780345EA1D788E9E009871A2 /* Secrets.swift in Sources */,
 				780345DA1D788E9E009871A2 /* Constants.swift in Sources */,
 				780345D81D788E9E009871A2 /* CenkersDetailViewController.swift in Sources */,
 				780345D41D788E9E009871A2 /* AboutUsViewController.swift in Sources */,

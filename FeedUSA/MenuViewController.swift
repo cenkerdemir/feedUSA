@@ -59,7 +59,7 @@ class MenuViewController: UIViewController {
         
         if segue.identifier == "allFacilities" {
             let navigationController = segue.destination
-            let tableVC = navigationController.childViewControllers.first as! FacilityTableViewController
+            let tableVC = navigationController.children.first as! FacilityTableViewController
             tableVC.title = "Soup Kitchens & Food Pantries"
             
             tableVC.facilities = self.store.facilities.sorted{ $0.name < $1.name }
@@ -67,7 +67,7 @@ class MenuViewController: UIViewController {
             print("Inside all facilities")
         } else if segue.identifier == "foodPantries" {
             let navigationController = segue.destination
-            let tableVC = navigationController.childViewControllers.first as! FacilityTableViewController
+            let tableVC = navigationController.children.first as! FacilityTableViewController
             tableVC.title = "Food Pantries"
             let foodPantries = self.store.getFoodPantryFacilities()
             
@@ -77,7 +77,7 @@ class MenuViewController: UIViewController {
             print("Inside food pantries")
         } else if segue.identifier == "soupKitchens" {
             let navigationController = segue.destination
-            let tableVC = navigationController.childViewControllers.first as! FacilityTableViewController
+            let tableVC = navigationController.children.first as! FacilityTableViewController
             tableVC.title = "Soup Kitchens"
             tableVC.facilities = self.store.getFacilitiesThatHave(feature: Facility.foodType.SoupKitchen)
         }
@@ -89,11 +89,11 @@ class MenuViewController: UIViewController {
         self.view.backgroundColor = UIColor.flatWhite().lighten(byPercentage: 0.5)
         self.dierectoryBoxLabel.backgroundColor = UIColor.flatNavyBlue().lighten(byPercentage: 0.2)
         directories.textColor = UIColor.flatWhite().lighten(byPercentage: 0.3)
-        soupAndPantryLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControlState())
-        fodPantryLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControlState())
-        soupKitchenLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControlState())
-        mapLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControlState())
-        aboutUsLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControlState())
+        soupAndPantryLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControl.State())
+        fodPantryLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControl.State())
+        soupKitchenLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControl.State())
+        mapLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControl.State())
+        aboutUsLabel.setTitleColor(UIColor.flatSkyBlueColorDark(), for: UIControl.State())
         allLocationsBox.layer.borderColor = UIColor.flatNavyBlueColorDark().cgColor
         
     }

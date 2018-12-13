@@ -47,7 +47,7 @@ class AboutUsViewController: UIViewController {
         self.markersParagraph.textColor = UIColor.flatWhite().lighten(byPercentage: 0.7)
         
         self.resourcesTitle.textColor = UIColor.flatCoffee()
-        self.resourcesLink.setTitleColor(UIColor.flatWhite().lighten(byPercentage: 0.7), for: UIControlState())
+        self.resourcesLink.setTitleColor(UIColor.flatWhite().lighten(byPercentage: 0.7), for: UIControl.State())
         
         
 //        aboutUsTxt5.textColor = UIColor.flatWhiteColor().lightenByPercentage(0.7)
