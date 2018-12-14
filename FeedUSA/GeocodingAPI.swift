@@ -42,11 +42,11 @@ class GeocodingAPI {
                         
                         let latDict = dictionary["lat"]
                         if let latitude = latDict {
-                            facility.latitude = Double(latitude as! NSNumber)
+                            facility.latitude = Double(truncating: latitude as! NSNumber)
                         }
                         let lngDict = dictionary["lng"]
                         if let longitude = lngDict {
-                            facility.longitude = Double(longitude as! NSNumber)
+                            facility.longitude = Double(truncating: longitude as! NSNumber)
                         }
                     }
                 }
